@@ -1,31 +1,19 @@
-#include <iostream>
+#include<bits/stdc++.h>
+#include <vector>
 using namespace std;
-int kadenAlgo(int arr[], int n)
-{
-    int currentSum = 0;
-    int maxSum = 0;
-    for(int i=0; i<n ;i++)
-    {   
-        currentSum += arr[i];
-        if(currentSum < 0)
+
+int maxSumSubarray(vector<int> A) {
+    int currentSum =0;
+    int maxSum = INT_MIN;
+    for(int i=0; i<A.size();i++)
+    {
+        currentSum+=A[i];
+        if(currentSum<A[i])
         {
-            currentSum = 0;
+            currentSum = A[i];
         }
         
-        
-        maxSum = max(maxSum,currentSum);
+        maxSum = max(currentSum,maxSum);
     }
-
     return maxSum;
-}
-
-int main() {
-    
-
- int arr[] = {1,-2,5,6,-5,9};
- int n = sizeof(arr)/sizeof(int);
-
- int sum = kadenAlgo(arr,n);
- cout<< " the sum is "<<sum<<endl;
- return 0; 
 }
