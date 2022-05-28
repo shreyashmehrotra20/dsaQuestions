@@ -3,7 +3,7 @@
 using namespace std;
 
 
-
+// good question
 pair<int, int> closestSum(vector<int> arr, int x){
     // your code goes here
      int start = 0;
@@ -13,7 +13,7 @@ pair<int, int> closestSum(vector<int> arr, int x){
      while(start<end)
      {
          if(abs(arr[start]+arr[end]-x)<diff)
-         {
+         {  // hre we check the differnece is less or more if less than change diff value to that value and store the start and end value 
              val1 =start;
              val2 = end;
              diff = abs(arr[start]+arr[end]-x);
@@ -21,7 +21,7 @@ pair<int, int> closestSum(vector<int> arr, int x){
              
          }
          if((arr[start]+arr[end])>x)
-         {
+         {  // here we will check if the sum of start and end value is more than the value then decreare the value of end or else increase start value 
              end--;
          }
          else
