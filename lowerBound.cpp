@@ -5,40 +5,39 @@ using namespace std;
 
 
 
+
 int lowerBound(vector<int> A, int Val) {
     int start = 0 ;
     int end = A.size()-1 ;
     int mid;
-    bool flag = false ;
+    int answer = 0;
     while (start<=end)
     {
         mid = (start+end)/2;
-        cout<<"bahr wala moid hai"<<mid<<endl;
-        if(mid==Val)
-        {   cout<<"andar wala mid hai"<<mid<<endl;
-            flag = true;
+        if(A[mid]==Val)
+        {   
+          
             return mid ;
         }
-        else if (mid<Val)
+        else if(A[mid]>Val)
         {
-            start = mid+1;
+          
+            end = mid -1;
         }
-        else if(mid>Val)
+        else
         {
-            end = mid-1;
+          answer = A[mid];
+          start = mid +1;
         }
     }
-    
-    if(flag==false)
-    {
-     return lowerBound(A,(Val-1));
-    }
-    
-    
+    return answer ;
 }
+
+    
+
 int main() {
-    vector<int> A = {0,1,3,7};
-    int Val = 4;
+    vector<int> A ={-1,-1,2,3,5};
+    int Val = 0;
     int Value = lowerBound(A,Val);
     cout<<"the value is "<<Value;
     return 0; 
