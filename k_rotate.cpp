@@ -8,7 +8,8 @@ int main() {
     k = 2
     for(int i=0; i<k;i++)
     {
-       int n= x%10;
+       
+
     }
     //for displaying 
     for(int j=0; j<n;j++)
