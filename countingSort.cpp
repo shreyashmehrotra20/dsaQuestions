@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 void countSort(vector<int> arr)
 {  
@@ -11,10 +12,10 @@ void countSort(vector<int> arr)
    {
        largest = max(arr[i],largest);
    }
-   cout<<largest;
+   
    vector<int> arr1(largest+1,0); // counting array
    
-   for(int i =0 ;i<=largest;i++)
+   for(int i =0 ;i<n;i++)
    {
        arr1[arr[i]]++;
    }
