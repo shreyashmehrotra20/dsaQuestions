@@ -2,6 +2,6 @@
 using namespace std;
 
 int main() {
-    char c = '2563';
-    cout<<c;
+    cout<<"hello";
+    return 0; 
 }
