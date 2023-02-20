@@ -35,17 +35,19 @@ int findOccuring(vector<int> arr){
                 s = mid+1;
             }
         }
+
+        mid=s+(e-s)/2;
     }
 
     return -1;
 }
 int main() {
-    vector<int> arr = {1,1,2,2,3,3,4,4,3,600,600,4,4};
+    vector<int> arr = {1,1,2,2,3,3,4,4,600,600,4,4,2};
     // int n;
     // cout<<"Enter Target"<<endl;
     // cin>>n;
     int ans = findOccuring(arr);
     cout<<"yo";
-    cout<<"Answer is "<<ans;
+    cout<<"Answer is "<<arr[ans];
     return 0; 
 }
