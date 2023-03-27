@@ -40,7 +40,7 @@ void merging(int arr[], int& n,int s ,int e,int mid)
     {
         arr[ac++]=left[i1++];
     }
-    while(i1<size1)
+    while(i2<size2)
     {
         arr[ac++] =right[i2++];
     }
@@ -63,8 +63,8 @@ void mergeSort(int arr[ ], int& n,int s ,int e)
 }
 
 int main() {
-    int arr[] = {2,9,3,7,33,8,41};
-    int n =7;
+    int arr[] = {2,2,2,2,9,3,3,3,3,7,33,8,41};
+    int n =13;
     int s=0;
     int e = n-1;
     mergeSort(arr,n,s,e);

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits.h>
 using namespace std;
-void findMax(int arr[],int index,int &maxi)
+void  findMax(int arr[],int index,int &maxi)s
 {
     if(index<0)
     {
