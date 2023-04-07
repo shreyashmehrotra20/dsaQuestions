@@ -41,6 +41,13 @@ class Shreyash {
 
    }
 
+   // destructor - ye aapne aap chalta hai static obj me - jab us object ka scope khatam ho jaata hai means object ne jo liya tha sab delete ho jaata hai
+
+   ~Shreyash()
+   {
+    cout<<"Mai destructor hun bhai log";
+   }
+
 
 };
 
@@ -55,5 +62,10 @@ int main() {
     Shreyash* d = new Shreyash;
     d->age = 20;
     cout<<d->age;
+
+    // note for dynamic object haamko khud hi delete kaarna hoga jo values haamne use ki hain 
+    // with help of "delete" keyword
+
+    // delete d; iise destructor dynamic wale ki liye bhi chalega means haame manually delete kaarna hoga dynamic wale ke resource 
     return 0; 
 }
