@@ -9,7 +9,8 @@ class Shreyash {
 
     int age;
     string name;
-
+     
+   
     
     void print()
     {
@@ -28,6 +29,8 @@ class Shreyash {
         weight = w;
         
     }
+
+   
 
    
     
