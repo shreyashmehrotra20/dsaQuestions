@@ -46,6 +46,6 @@ int main() {
     {
         cout<<arr[i]<<" ";
     }
-    //hhhhhhhhh
+    //home
     return 0; 
 }
