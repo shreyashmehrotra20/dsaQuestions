@@ -7,44 +7,43 @@ class Node{
     int data;
     Node* next;
 
-    Node() {
-        this->data = 0;
-        this->next = NULL;
-    }
-    Node(int val)
+    Node()
     {
-        this->data = val;
-        this->next = NULL;
+        this->data=0;
+        this->next=NULL;
+    }
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next= NULL;
     }
     
 };
 
-void print(Node* head)
+void print(Node*& head)
     {    
-         Node* temp = head;
-         while(temp!=NULL)
-         {
-            cout<<temp->data<< " ";
-            temp=temp->next;
-         }
+        Node* temp = head;
+        while(temp!=NULL)
+        {   
+            cout<<temp->data<<" ";
+            temp = temp->next;
+        }
     }
 int main() {
-    
-    Node* first  =new Node(10);
-    Node* second  =new Node(11);
-    Node* third  =new Node(12);
-    Node* fourth  =new Node(13);
-    Node* fifth  =new Node(14);
-    
-
+    Node* first = new Node(10);
+    Node* second = new Node(20);
+    Node* third = new Node(30);
+    Node* four = new Node(40);
+    Node* five = new Node(50);  
+ 
+    //linking 
     first->next = second;
-    second->next = third;
-    third->next = fourth;
-    fourth->next = fifth;
-    fifth->next = NULL;
+    second->next= third;
+    third->next=four;
+    four->next= five;
+    five->next = NULL;
     
-
-     // printing value 
     print(first);
-    return 0; 
+
 }
